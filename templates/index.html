@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Resume Builder</h1>
+        <form action="/generate" method="POST">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label>Full Name: <input type="text" name="name" required value="Jane Doe"></label>
+                <label>Email: <input type="email" name="email" required value="jane@example.com"></label>
+                <label>Phone: <input type="text" name="phone" value="+1 555-0199"></label>
+                <label>LinkedIn/Website: <input type="text" name="website" value="linkedin.com/in/janedoe"></label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Professional Summary</legend>
+                <textarea name="summary" rows="4" required>Detail-oriented software engineer with 5+ years of experience building scalable web applications and microservices.</textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Work Experience</legend>
+                <textarea name="experience" rows="5" placeholder="Company, Role, Dates, Key Achievements">Senior Developer at TechCorp (2021-Present)
+- Led migration to cloud infrastructure, reducing latency by 30%.
+- Mentored junior engineers and instituted code review standards.</textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Education</legend>
+                <textarea name="education" rows="3" placeholder="Degree, Institution, Year">B.S. in Computer Science, State University (2017-2021)</textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Skills</legend>
+                <input type="text" name="skills" value="Python, Flask, JavaScript, Docker, SQL, Git">
+            </fieldset>
+
+            <button type="submit" class="btn">Generate Resume PDF</button>
+        </form>
+    </div>
+</body>
+</html>

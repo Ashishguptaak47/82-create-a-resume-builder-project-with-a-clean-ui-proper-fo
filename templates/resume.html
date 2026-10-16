@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ data.name }} - Resume</title>
+    <style>
+        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #333; line-height: 1.6; margin: 0; padding: 40px; }
+        .header { text-align: center; border-bottom: 2px solid #0056b3; padding-bottom: 20px; margin-bottom: 20px; }
+        .header h1 { margin: 0; color: #0056b3; font-size: 28px; }
+        .contact-info { font-size: 14px; color: #666; margin-top: 5px; }
+        section { margin-bottom: 20px; }
+        h2 { font-size: 16px; text-transform: uppercase; border-bottom: 1px solid #ddd; padding-bottom: 5px; color: #0056b3; margin-bottom: 10px; }
+        p, li { font-size: 14px; }
+        ul { padding-left: 20px; margin: 5px 0; }
+        .pre-wrap { white-space: pre-line; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>{{ data.name }}</h1>
+        <div class="contact-info">
+            {{ data.email }} | {{ data.phone }} | {{ data.website }}
+        </div>
+    </div>
+    
+    <section>
+        <h2>Summary</h2>
+        <p class="pre-wrap">{{ data.summary }}</p>
+    </section>
+
+    <section>
+        <h2>Experience</h2>
+        <div class="pre-wrap">{{ data.experience }}</div>
+    </section>
+
+    <section>
+        <h2>Education</h2>
+        <div class="pre-wrap">{{ data.education }}</div>
+    </section>
+
+    <section>
+        <h2>Skills</h2>
+        <p>{{ data.skills }}</p>
+    </section>
+</body>
+</html>
